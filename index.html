@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mentorly — Better Tutors. Brighter Future.</title>
+<link rel="icon" type="image/png" href="images/logo.png">
+<script>if(!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("intro");try{if(localStorage.getItem("theme")==="dark")document.documentElement.dataset.theme="dark"}catch(e){}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=DM+Sans:wght@400;500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="intro-curtain" id="curtain" aria-hidden="true"><i class="ln"></i><p class="tg">Personalized mentorship</p></div>
+
+<div class="cursor-ring" id="ring"></div>
+<div class="cursor-dot" id="dot"></div>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="nav" id="nav">
+  <a class="logo" href="#" data-cursor>
+    <img class="logo-mark" src="images/logo.png" alt="">
+    Mentorly
+  </a>
+  <nav class="links" aria-label="Main">
+    <a class="on" href="#" data-cursor>Home</a>
+    <a href="#subjects" data-cursor>Subjects</a>
+    <a href="#about" data-cursor>About</a>
+    <a href="#plans" data-cursor>Plans</a>
+    <a href="#reviews" data-cursor>Reviews</a>
+    <a href="#contact" data-cursor>Contact</a>
+  </nav>
+  <div class="nav-right">
+    <button class="theme" id="theme" aria-label="Switch to dark mode" data-cursor>
+      <svg class="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z"/></svg>
+      <svg class="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M18.7 5.3l-1.6 1.6M6.9 17.1l-1.6 1.6"/></svg>
+    </button>
+    <a class="btn magnetic" href="#" data-cursor>
+      <span>Book a Free Trial</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+    </a>
+  </div>
+</header>
+
+<main>
+  <div class="track" id="track">
+    <section class="hero">
+
+      <div class="stage">
+        <div class="slides" id="slides">
+          <div class="slide s1 active"><div class="img"></div></div>
+          <div class="slide s2"><div class="img"></div></div>
+          <div class="slide s3"><div class="img"></div></div>
+          <div class="slide s4"><div class="img"></div></div>
+          <div class="slide s5"><div class="img"></div></div>
+        </div>
+        <div class="shade"></div>
+        <div class="warm"></div>
+      </div>
+
+      <div class="ui">
+        <div class="content">
+          <h1>
+            <span class="l"><span style="--d:.3s">Better Tutors.</span></span>
+            <span class="l"><span style="--d:.6s">Brighter Future.</span></span>
+          </h1>
+
+          <p class="desc" id="desc" aria-live="polite">
+            <span class="dl"><span style="--d:.75s">Every child learns at their own pace.</span></span>
+            <span class="dl"><span style="--d:.85s">Our tutors sit beside them, line by line,</span></span>
+            <span class="dl"><span style="--d:.95s">until the idea finally clicks.</span></span>
+          </p>
+
+          <div class="cta">
+            <a class="btn magnetic fx" style="--d:1.1s" href="#subjects" data-cursor>
+              <span>Find Your Tutor</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+            </a>
+            <a class="link fx" style="--d:1.2s" href="#subjects" data-cursor>Learn More</a>
+          </div>
+
+          <div class="features">
+            <div class="f fx" style="--d:1.3s">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20c.8-3.8 3.6-5.8 7.5-5.8s6.7 2 7.5 5.8z"/></svg>
+              <div class="ft">Verified Tutors</div><div class="fd">Background checked &amp; vetted</div>
+            </div>
+            <div class="f fx" style="--d:1.4s">
+              <svg viewBox="0 0 24 24"><path d="M12 3.2l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 17l-5.4 2.9 1.1-6.1L3.2 9.6l6.1-.8z"/></svg>
+              <div class="ft">Flexible Learning</div><div class="fd">Online or in-person options</div>
+            </div>
+            <div class="f fx" style="--d:1.5s">
+              <svg viewBox="0 0 24 24"><path d="M5 20V13M10 20V9M15 20V5M20 20V11"/></svg>
+              <div class="ft">Proven Results</div><div class="fd">Better grades, more confidence</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="note fx" style="--d:1.6s" id="note">
+          <span class="note-in" id="noteText">Small steps, big dreams.</span>
+          <svg viewBox="0 0 150 14" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M2 10 C 40 2, 90 2, 148 6"/></svg>
+        </div>
+
+        <aside class="trust">
+          <div class="card fx" style="--d:1.7s">
+            <div class="avs"><span class="av a">AS</span><span class="av b">RK</span><span class="av c">MP</span></div>
+            <div class="ct">Trusted by 5,000+ students<b>★★★★★ &nbsp;4.9/5</b></div>
+          </div>
+        </aside>
+
+        <div class="dots" id="dots">
+          <button class="dot on fx" style="--d:1.7s" data-i="0" aria-label="Show slide 1" data-cursor></button>
+          <button class="dot fx" style="--d:1.8s" data-i="1" aria-label="Show slide 2" data-cursor></button>
+          <button class="dot fx" style="--d:1.9s" data-i="2" aria-label="Show slide 3" data-cursor></button>
+          <button class="dot fx" style="--d:2s" data-i="3" aria-label="Show slide 4" data-cursor></button>
+          <button class="dot fx" style="--d:2.1s" data-i="4" aria-label="Show slide 5" data-cursor></button>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
+  <!-- Subjects: names, tags and descriptions are placeholders -->
+  <section class="after" id="subjects">
+    <p class="eyebrow">Subjects</p>
+    <h2 id="split">Every subject, taught with patience and care.</h2>
+
+    <ul class="rows">
+      <li class="row" data-img="math">
+        <button class="row-head" aria-expanded="false" data-cursor>
+          <span class="num">01</span><span class="name"><span>Mathematics</span></span><span class="tag">Grades 1–12</span>
+          <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="row-body"><div class="rb-in">
+          <div class="rb-pad">
+            <div class="rb-copy">
+              <h3>Make numbers <em>make sense.</em></h3>
+              <p>From first fractions to calculus, we turn “I can’t” into “oh, that’s easy”, one clear step at a time.</p>
+              <ul class="chips"><li>Step by step</li><li>Zero jargon</li><li>Confidence first</li></ul>
+              <a class="btn dark magnetic" href="#" data-cursor><span>Book a Free Trial</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+            </div>
+            <div class="rb-photo" style="background-image:var(--img-math);background-position:var(--pos-math)"></div>
+          </div>
+        </div></div>
+      </li>
+      <li class="row" data-img="science">
+        <button class="row-head" aria-expanded="false" data-cursor>
+          <span class="num">02</span><span class="name"><span>Science</span></span><span class="tag">Physics · Chemistry · Biology</span>
+          <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="row-body"><div class="rb-in">
+          <div class="rb-pad">
+            <div class="rb-copy">
+              <h3>Curiosity, <em>switched on.</em></h3>
+              <p>Physics, chemistry and biology taught through real questions and real experiments, so ideas stick for good.</p>
+              <ul class="chips"><li>Hands-on thinking</li><li>Big questions</li><li>Real understanding</li></ul>
+              <a class="btn dark magnetic" href="#" data-cursor><span>Book a Free Trial</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+            </div>
+            <div class="rb-photo" style="background-image:var(--img-science);background-position:var(--pos-science)"></div>
+          </div>
+        <ul class="rows sub">
+      <li class="row" data-img="physics">
+        <button class="row-head" aria-expanded="false" data-cursor>
+          <span class="num">02.1</span><span class="name"><span>Physics</span></span><span class="tag">Forces · Circuits · Energy</span>
+          <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="row-body"><div class="rb-in">
+          <div class="rb-pad">
+            <div class="rb-copy">
+              <h3>See how the world <em>really works.</em></h3>
+              <p>Forces, circuits, energy and light, explained so clearly you start spotting the physics everywhere.</p>
+              <ul class="chips"><li>Visual explanations</li><li>Problem solving</li><li>Exam ready</li></ul>
+              <a class="btn dark magnetic" href="#" data-cursor><span>Book a Free Trial</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+            </div>
+            <div class="rb-photo" style="background-image:var(--img-physics);background-position:var(--pos-physics)"></div>
+          </div>
+        </div></div>
+      </li>
+      <li class="row" data-img="chemistry">
+        <button class="row-head" aria-expanded="false" data-cursor>
+          <span class="num">02.2</span><span class="name"><span>Chemistry</span></span><span class="tag">Reactions · Lab work</span>
+          <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="row-body"><div class="rb-in">
+          <div class="rb-pad">
+            <div class="rb-copy">
+              <h3>Reactions that <em>finally click.</em></h3>
+              <p>From the periodic table to balancing equations, we make every reaction logical, not a list to memorise.</p>
+              <ul class="chips"><li>Lab thinking</li><li>Clear methods</li><li>No guesswork</li></ul>
+              <a class="btn dark magnetic" href="#" data-cursor><span>Book a Free Trial</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+            </div>
+            <div class="rb-photo" style="background-image:var(--img-chemistry);background-position:var(--pos-chemistry)"></div>
+          </div>
+        </div></div>
+      </li>
+      <li class="row" data-img="biology">
+        <button class="row-head" aria-expanded="false" data-cursor>
+          <span class="num">02.3</span><span class="name"><span>Biology</span></span><span class="tag">Cells · Life systems</span>
+          <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="row-body"><div class="rb-in">
+          <div class="rb-pad">
+            <div class="rb-copy">
+              <h3>Life, <em>explained beautifully.</em></h3>
+              <p>Cells to ecosystems, with diagrams, stories and memory tricks that make the whole subject hang together.</p>
+              <ul class="chips"><li>Diagrams</li><li>Memory tricks</li><li>Big picture</li></ul>
+              <a class="btn dark magnetic" href="#" data-cursor><span>Book a Free Trial</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+            </div>
+            <div class="rb-photo" style="background-image:var(--img-biology);background-position:var(--pos-biology)"></div>
+          </div>
+        </div></div>
+      </li>
+        </ul>
+        </div></div>
+      </li>
+      <li class="row" data-img="english">
+        <button class="row-head" aria-expanded="false" data-cursor>
+          <span class="num">03</span><span class="name"><span>English</span></span><span class="tag">Reading · Writing</span>
+          <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="row-body"><div class="rb-in">
+          <div class="rb-pad">
+            <div class="rb-copy">
+              <h3>Words that <em>win people over.</em></h3>
+              <p>Stronger reading, sharper writing and the confidence to speak up, with feedback that is kind and specific.</p>
+              <ul class="chips"><li>Reading</li><li>Writing</li><li>Speaking</li></ul>
+              <a class="btn dark magnetic" href="#" data-cursor><span>Book a Free Trial</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+            </div>
+            <div class="rb-photo" style="background-image:var(--img-english);background-position:var(--pos-english)"></div>
+          </div>
+        </div></div>
+      </li>
+      <li class="row" data-img="languages">
+        <button class="row-head" aria-expanded="false" data-cursor>
+          <span class="num">04</span><span class="name"><span>Languages</span></span><span class="tag">Conversation · Grammar</span>
+          <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="row-body"><div class="rb-in">
+          <div class="rb-pad">
+            <div class="rb-copy">
+              <h3>Speak it. <em>Don’t just study it.</em></h3>
+              <p>Real conversation from lesson one, with grammar that finally makes sense and a tutor who moves at your pace.</p>
+              <ul class="chips"><li>Conversation</li><li>Grammar</li><li>Your pace</li></ul>
+              <a class="btn dark magnetic" href="#" data-cursor><span>Book a Free Trial</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+            </div>
+            <div class="rb-photo" style="background-image:var(--img-languages);background-position:var(--pos-languages)"></div>
+          </div>
+        </div></div>
+      </li>
+      <li class="row" data-img="cs">
+        <button class="row-head" aria-expanded="false" data-cursor>
+          <span class="num">05</span><span class="name"><span>Computer Science</span></span><span class="tag">Coding basics</span>
+          <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="row-body"><div class="rb-in">
+          <div class="rb-pad">
+            <div class="rb-copy">
+              <h3>Don’t just use tech. <em>Build it.</em></h3>
+              <p>Logic, creativity and your first lines of code, taught through small projects you will be proud to show off.</p>
+              <ul class="chips"><li>Coding basics</li><li>Projects</li><li>Problem solving</li></ul>
+              <a class="btn dark magnetic" href="#" data-cursor><span>Book a Free Trial</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+            </div>
+            <div class="rb-photo" style="background-image:var(--img-cs);background-position:var(--pos-cs)"></div>
+          </div>
+        </div></div>
+      </li>
+      <li class="row" data-img="exam">
+        <button class="row-head" aria-expanded="false" data-cursor>
+          <span class="num">06</span><span class="name"><span>Exam Preparation</span></span><span class="tag">Boards · Entrance</span>
+          <span class="arr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+        </button>
+        <div class="row-body"><div class="rb-in">
+          <div class="rb-pad">
+            <div class="rb-copy">
+              <h3>Walk in calm. <em>Walk out proud.</em></h3>
+              <p>Focused revision plans, practice papers and exam-day strategy, so the big day feels like just another page.</p>
+              <ul class="chips"><li>Revision plans</li><li>Practice papers</li><li>Calm strategy</li></ul>
+              <a class="btn dark magnetic" href="#" data-cursor><span>Book a Free Trial</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></a>
+            </div>
+            <div class="rb-photo" style="background-image:var(--img-exam);background-position:var(--pos-exam)"></div>
+          </div>
+        </div></div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- About + Teachers: names, roles and quotes are placeholders -->
+  <section class="sec" id="about">
+    <div class="about-top">
+      <div class="rv">
+        <p class="eyebrow">About Mentorly</p>
+        <h2>Shaping Bright Futures Through <em>Personalized Mentorship.</em></h2>
+      </div>
+      <p class="intro rv" style="--d:150ms">At Mentorly, we believe that education isn&rsquo;t one-size-fits-all. Great learning requires patience, individual care, and an environment where students feel heard. We don&rsquo;t just teach subjects; we bridge the gap between academic challenges and student confidence by providing expert guidance tailored to every unique learning style.</p>
+    </div>
+    <div class="pillars" id="trail"><svg class="trail" aria-hidden="true"></svg><div class="xmark" aria-hidden="true"><svg viewBox="0 0 40 40"><path d="M6 6l28 28M34 6L6 34" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/></svg><i></i><span>X marks the spot.</span></div>
+      <article class="pillar"><span class="n">01</span><h3>Mentorship First</h3><p>We prioritize understanding the student&rsquo;s mindset, helping them beat academic anxiety before diving into the core curriculum.</p><i class="bar"></i></article>
+      <article class="pillar"><span class="n">02</span><h3>Conceptual Clarity</h3><p>We focus deeply on the underlying logic of complex problems&mdash;whether in Mathematics, Science, or Computer Science&mdash;ensuring concepts are truly understood rather than just memorized.</p><i class="bar"></i></article></li>
+      <article class="pillar"><span class="n">03</span><h3>Adaptive Pacing</h3><p>Every program is structured to adapt to the student&rsquo;s natural rhythm, helping them build a strong conceptual foundation step-by-step.</p><i class="bar"></i></article>
+    </div>
+  </section>
+
+  <section class="story" id="story">
+    <div class="story-bg" aria-hidden="true"><i></i><i></i></div>
+    <div class="rv">
+      <p class="eyebrow">Our story</p>
+      <h2>How Mentorly <em>Began</em></h2>
+      <i class="line"></i>
+    </div>
+    <div class="rv" style="--d:200ms">
+      <p class="body">Mentorly was founded to solve a critical issue in modern education: the lack of personalized guidance in overcrowded spaces. Seeing students struggle to keep up with rigid academic paces, we set out to create a platform that brings premium, reliable, and deeply empathetic tutoring right to their screens. Today, we are proud to stand as a trusted partner for families aiming for top-tier academic growth.</p>
+      <div class="acts">
+        <a class="btn magnetic" href="#" data-cursor><span>Book a Free Trial</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="ulink" href="#teachers" data-cursor>Meet our teachers <span>&rarr;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="teachers">
+    <div class="teachers-head">
+      <div class="rv"><p class="eyebrow">Our teachers</p><h2>Guided by people who <em>listen first.</em></h2></div>
+      <p class="rv" style="--d:150ms">Patient, experienced and genuinely kind. Each mentor is chosen as much for how they listen as for what they know.</p>
+    </div>
+    <ul class="tgrid">
+      <li class="tc rv" style="--d:0ms">
+        <div class="arch"><img src="images/teacher-anaya-rao.jpg" alt="Anaya Rao" loading="lazy" style="object-position:50% 25%"></div>
+        <h3>Anaya Rao</h3><p class="role">Mathematics</p><p class="deg">M.Sc. Mathematics</p><p class="quote">&ldquo;Every proof begins with one honest question.&rdquo;</p>
+      </li>
+      <li class="tc rv" style="--d:90ms">
+        <div class="arch"><img src="images/teacher-meera-iyer.jpg" alt="Meera Iyer" loading="lazy" style="object-position:50% 30%"></div>
+        <h3>Meera Iyer</h3><p class="role">Physics</p><p class="deg">M.Sc. Physics · B.Ed.</p><p class="quote">&ldquo;Curiosity is the only force I never have to teach.&rdquo;</p>
+      </li>
+      <li class="tc rv" style="--d:180ms">
+        <div class="arch"><img src="images/teacher-claire-hobbs.jpg" alt="Claire Hobbs" loading="lazy" style="object-position:50% 30%"></div>
+        <h3>Claire Hobbs</h3><p class="role">English &amp; Writing</p><p class="deg">M.A. English Literature</p><p class="quote">&ldquo;Find the voice already waiting inside you.&rdquo;</p>
+      </li>
+      <li class="tc rv" style="--d:270ms">
+        <div class="arch"><img src="images/teacher-elena-markovic.jpg" alt="Elena Marković" loading="lazy" style="object-position:50% 22%"></div>
+        <h3>Elena Marković</h3><p class="role">Languages</p><p class="deg">M.A. Applied Linguistics</p><p class="quote">&ldquo;A new language is a new way of being understood.&rdquo;</p>
+      </li>
+      <li class="tc rv" style="--d:0ms">
+        <div class="arch"><img src="images/teacher-naomi-carter.jpg" alt="Naomi Carter" loading="lazy" style="object-position:50% 30%"></div>
+        <h3>Naomi Carter</h3><p class="role">Computer Science</p><p class="deg">M.Tech Computer Science</p><p class="quote">&ldquo;Code is just clear thinking, written down.&rdquo;</p>
+      </li>
+      <li class="tc rv" style="--d:90ms">
+        <div class="arch"><img src="images/teacher-daniel-okafor.jpg" alt="Daniel Okafor" loading="lazy" style="object-position:50% 22%"></div>
+        <h3>Daniel Okafor</h3><p class="role">Exam Preparation</p><p class="deg">M.Ed. · B.Sc. Education</p><p class="quote">&ldquo;Calm minds score higher than anxious ones.&rdquo;</p>
+      </li>
+      <li class="tc rv" style="--d:180ms">
+        <div class="arch"><img src="images/teacher-prof-ramesh-nair.jpg" alt="Prof. Ramesh Nair" loading="lazy" style="object-position:52% 42%"></div>
+        <h3>Prof. Ramesh Nair</h3><p class="role">Chemistry &amp; Biology</p><p class="deg">Ph.D. Chemistry</p><p class="quote">&ldquo;Look closely. Everything alive is a quiet reaction.&rdquo;</p>
+      </li>
+      <li class="tc rv" style="--d:0ms">
+        <div class="arch"><img src="images/teacher-adaeze-mensah.jpg" alt="Adaeze Mensah" loading="lazy" style="object-position:50% 38%"></div>
+        <h3>Adaeze Mensah</h3><p class="role">Study Skills</p><p class="deg">M.Ed. Educational Psychology</p><p class="quote">&ldquo;Confidence is built one small win at a time.&rdquo;</p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- Batches & plans: all prices, timings and seat counts are placeholders -->
+  <section class="sec" id="plans">
+    <div class="teachers-head">
+      <div class="rv"><p class="eyebrow">Batches &amp; plans</p><h2>Pick the rhythm that <em>suits your child.</em></h2></div>
+      <p class="rv" style="--d:150ms">Learn in a small circle or one-to-one. Start with a free trial, then choose a plan that grows with them. Pause or change any time.</p>
+    </div>
+    <h4 class="sub-h rv">Batches</h4>
+    <div class="batches">
+      <article class="batch rv" style="--d:0ms">
+        <p class="b-tag">Grades 6–10</p><h3>Small Group</h3><p class="b-line">Six learners, one mentor. Shared curiosity, personal attention.</p>
+        <div class="b-when"><span>Mon · Wed · Fri</span><span>5:00 PM IST</span></div>
+        <div class="seats" aria-label="2 seats left"><i class=f style="--j:0"></i><i class=f style="--j:1"></i><i class=f style="--j:2"></i><i class=f style="--j:3"></i><i class=f style="--j:4"></i><i class=f style="--j:5"></i><i style="--j:6"></i><i style="--j:7"></i></div><p class="b-note">2 seats left</p>
+        <a class="ulink" href="#" data-cursor>Join this batch <span>&rarr;</span></a>
+      </article>
+      <article class="batch rv" style="--d:100ms">
+        <p class="b-tag">Grades 1–12</p><h3>One-to-One</h3><p class="b-line">Your child, your pace. A mentor fully tuned to one learner.</p>
+        <div class="b-when"><span>You choose</span><span>Flexible slots</span></div>
+        <div class="seats" aria-label="Always open"><i class="f" style="--j:0"></i></div><p class="b-note">Always open</p>
+        <a class="ulink" href="#" data-cursor>Join this batch <span>&rarr;</span></a>
+      </article>
+      <article class="batch rv" style="--d:200ms">
+        <p class="b-tag">Grades 9–12</p><h3>Exam Sprint</h3><p class="b-line">Focused weeks of revision, mock tests and calm strategy.</p>
+        <div class="b-when"><span>Tue · Thu · Sat</span><span>7:00 PM IST</span></div>
+        <div class="seats" aria-label="3 seats left"><i class=f style="--j:0"></i><i class=f style="--j:1"></i><i class=f style="--j:2"></i><i class=f style="--j:3"></i><i class=f style="--j:4"></i><i class=f style="--j:5"></i><i class=f style="--j:6"></i><i style="--j:7"></i><i style="--j:8"></i><i style="--j:9"></i></div><p class="b-note">3 seats left</p>
+        <a class="ulink" href="#" data-cursor>Join this batch <span>&rarr;</span></a>
+      </article>
+    </div>
+    <div class="plans-top">
+      <h4 class="sub-h rv" style="margin:0">Subscriptions</h4>
+      <div class="bill rv" id="bill" role="group" aria-label="Billing period" style="--i:0">
+        <i></i>
+        <button type="button" data-m="1" data-off="0" class="on" data-cursor>Monthly</button>
+        <button type="button" data-m="3" data-off=".1" data-cursor>Quarterly <em>&minus;10%</em></button>
+        <button type="button" data-m="12" data-off=".2" data-cursor>Yearly <em>&minus;20%</em></button>
+      </div>
+    </div>
+    <div class="plans">
+      <article class="plan rv" style="--d:0ms">
+        
+        <p class="b-tag">Begin gently</p><h3>Explore</h3>
+        <p class="price"><span class="cur">&#8377;</span><b data-base="1999">1,999</b><small>/ month</small></p>
+        <p class="billed">&nbsp;</p>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>4 live group sessions a month</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Weekly practice sheets</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Recorded class access</span></li></ul>
+        <a class="btn magnetic dark" href="#" data-cursor><span>Start with a free trial</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+      <article class="plan rv feat" style="--d:100ms">
+        <span class="badge">Most chosen</span>
+        <p class="b-tag">Balanced pace</p><h3>Mentor</h3>
+        <p class="price"><span class="cur">&#8377;</span><b data-base="3999">3,999</b><small>/ month</small></p>
+        <p class="billed">&nbsp;</p>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>8 live sessions a month</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Doubt support, 7 days a week</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Monthly progress report</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Choose any two subjects</span></li></ul>
+        <a class="btn magnetic " href="#" data-cursor><span>Start with a free trial</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+      <article class="plan rv" style="--d:200ms">
+        
+        <p class="b-tag">The full journey</p><h3>Mastery</h3>
+        <p class="price"><span class="cur">&#8377;</span><b data-base="7499">7,499</b><small>/ month</small></p>
+        <p class="billed">&nbsp;</p>
+        <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>8 one-to-one sessions a month</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Personal learning roadmap</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Exam preparation track</span></li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span>Fortnightly parent catch-up</span></li></ul>
+        <a class="btn magnetic dark" href="#" data-cursor><span>Start with a free trial</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </article>
+    </div>
+  </section>
+
+  <!-- Reviews: every name and quote below is a placeholder sample. Replace with real parent feedback before launch. -->
+  <section class="sec" id="reviews">
+    <div class="teachers-head">
+      <div class="rv"><p class="eyebrow">Reviews</p><h2>Words from the <em>families</em> we learn beside.</h2></div>
+      <p class="rv" style="--d:150ms">Small moments, shared by parents: a first confident answer, a notebook no longer hidden, a calmer evening.</p>
+    </div>
+    <div class="rvw rv">
+      <ul class="rv-list" role="tablist" aria-label="Parents">
+        <li><button type="button" class="rv-item on" data-i="0" data-cursor><span class="mono">P</span><span class="who"><b>Priya M.</b><small>Parent · Grade 8 Mathematics</small></span><i></i></button></li>
+        <li><button type="button" class="rv-item" data-i="1" data-cursor><span class="mono">R</span><span class="who"><b>Rahul S.</b><small>Parent · Grade 10 Physics</small></span><i></i></button></li>
+        <li><button type="button" class="rv-item" data-i="2" data-cursor><span class="mono">F</span><span class="who"><b>Fatima K.</b><small>Parent · Grade 6 English</small></span><i></i></button></li>
+        <li><button type="button" class="rv-item" data-i="3" data-cursor><span class="mono">S</span><span class="who"><b>Sandeep R.</b><small>Parent · Grade 11 Computer Science</small></span><i></i></button></li>
+        <li><button type="button" class="rv-item" data-i="4" data-cursor><span class="mono">A</span><span class="who"><b>Anita D.</b><small>Parent · Grade 9 Chemistry</small></span><i></i></button></li>
+        <li><button type="button" class="rv-item" data-i="5" data-cursor><span class="mono">V</span><span class="who"><b>Vikram S.</b><small>Parent · Grade 12 Exam Preparation</small></span><i></i></button></li>
+      </ul>
+      <figure class="rv-quote" aria-live="polite">
+        <span class="qm" aria-hidden="true">&ldquo;</span>
+        <blockquote id="rvQ">Maths used to end in tears at our house. Within two months my daughter was explaining fractions to her little brother. Her mentor never rushed her, and never made her feel behind.</blockquote>
+        <figcaption id="rvC"><b>Priya M.</b> &middot; Parent · Grade 8 Mathematics</figcaption>
+      </figure>
+    </div>
+    <div class="mq rv" aria-label="More parent feedback"><div class="mq-track"><figure class="mq-card" data-cursor><blockquote>&ldquo;Lessons feel like conversations, not lectures.&rdquo;</blockquote><figcaption>Ishaan's mum</figcaption></figure><figure class="mq-card" data-cursor><blockquote>&ldquo;Flexible timings made it easy for our family.&rdquo;</blockquote><figcaption>Meera N.</figcaption></figure><figure class="mq-card" data-cursor><blockquote>&ldquo;The progress reports are clear and honest.&rdquo;</blockquote><figcaption>Arjun T.</figcaption></figure><figure class="mq-card" data-cursor><blockquote>&ldquo;She asks to start class early now.&rdquo;</blockquote><figcaption>Kavya's dad</figcaption></figure><figure class="mq-card" data-cursor><blockquote>&ldquo;Gentle, patient and always prepared.&rdquo;</blockquote><figcaption>Neha B.</figcaption></figure><figure class="mq-card" data-cursor><blockquote>&ldquo;Worth every minute of the free trial.&rdquo;</blockquote><figcaption>Samir P.</figcaption></figure><figure class="mq-card" data-cursor><blockquote>&ldquo;Finally, someone who explains the "why".&rdquo;</blockquote><figcaption>Lakshmi V.</figcaption></figure><figure class="mq-card" data-cursor><blockquote>&ldquo;Our son smiles through maths now.&rdquo;</blockquote><figcaption>Joseph D.</figcaption></figure><figure class="mq-card" data-cursor><blockquote>&ldquo;Lessons feel like conversations, not lectures.&rdquo;</blockquote><figcaption>Ishaan's mum</figcaption></figure><figure class="mq-card" data-cursor><blockquote>&ldquo;Flexible timings made it easy for our family.&rdquo;</blockquote><figcaption>Meera N.</figcaption></figure><figure class="mq-card" data-cursor><blockquote>&ldquo;The progress reports are clear and honest.&rdquo;</blockquote><figcaption>Arjun T.</figcaption></figure><figure class="mq-card" data-cursor><blockquote>&ldquo;She asks to start class early now.&rdquo;</blockquote><figcaption>Kavya's dad</figcaption></figure><figure class="mq-card" data-cursor><blockquote>&ldquo;Gentle, patient and always prepared.&rdquo;</blockquote><figcaption>Neha B.</figcaption></figure><figure class="mq-card" data-cursor><blockquote>&ldquo;Worth every minute of the free trial.&rdquo;</blockquote><figcaption>Samir P.</figcaption></figure><figure class="mq-card" data-cursor><blockquote>&ldquo;Finally, someone who explains the "why".&rdquo;</blockquote><figcaption>Lakshmi V.</figcaption></figure><figure class="mq-card" data-cursor><blockquote>&ldquo;Our son smiles through maths now.&rdquo;</blockquote><figcaption>Joseph D.</figcaption></figure></div></div>
+  </section>
+
+  <!-- Contact: phone numbers are made-up placeholders -->
+  <section class="sec" id="contact">
+    <div class="teachers-head">
+      <div class="rv"><p class="eyebrow">Contact</p><h2>Let&rsquo;s begin the <em>journey</em> together.</h2></div>
+      <p class="rv" style="--d:150ms">Tell us a little about your child. We&rsquo;ll reply within one working day and set up a free trial class at a time that suits you.</p>
+    </div>
+    <div class="cw">
+      <div class="cinfo">
+        <a class="crow rv" href="mailto:ayanjit7987@gmail.com" data-cursor><span class="k">Write to us</span><span class="v">ayanjit7987@gmail.com</span><i>&nearr;</i></a>
+        <a class="crow rv" style="--d:80ms" href="tel:+919876543210" data-cursor><span class="k">Call</span><span class="v">+91 98765 43210</span><i>&nearr;</i></a>
+        <a class="crow rv" style="--d:160ms" href="tel:+919000012345" data-cursor><span class="k">WhatsApp</span><span class="v">+91 90000 12345</span><i>&nearr;</i></a>
+        <div class="crow static rv" style="--d:240ms"><span class="k">Hours</span><span class="v">Mon&ndash;Sat &middot; 9 AM&ndash;8 PM IST</span></div>
+        <div class="crow static rv" style="--d:320ms"><span class="k">Where</span><span class="v">Online &middot; learn from anywhere</span></div>
+      </div>
+      <form class="cform rv" id="cform" style="--d:120ms" novalidate>
+        <div class="fld"><input id="cn" name="name" placeholder=" " autocomplete="name" required><label for="cn">Parent&rsquo;s name</label></div>
+        <div class="fld"><input id="ce" name="email" type="email" placeholder=" " autocomplete="email" required><label for="ce">Email address</label></div>
+        <div class="fld"><input id="cg" name="grade" placeholder=" "><label for="cg">Child&rsquo;s grade &amp; subject</label></div>
+        <div class="fld"><textarea id="cm" name="msg" rows="3" placeholder=" "></textarea><label for="cm">Anything we should know?</label></div>
+        <button class="btn dark magnetic" type="submit" data-cursor><span>Request a free trial</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <p class="fmsg" id="fmsg" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="outro" id="outro">
+  <div class="o-glow" aria-hidden="true"></div>
+  <div class="o-top">
+    <p class="eyebrow rv">With gratitude</p>
+    <h2 class="rv">Every child. Every pace. <em>Every dream.</em></h2>
+    <a class="btn magnetic rv" style="--d:150ms" href="#contact" data-cursor><span>Book a Free Trial</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  </div>
+  <div class="wm rv" id="wm" aria-label="Mentorly">Mentorly</div>
+  <div class="o-nav rv">
+    <nav aria-label="Footer"><a class="ulink" href="#subjects" data-cursor>Subjects</a><a class="ulink" href="#about" data-cursor>About</a><a class="ulink" href="#plans" data-cursor>Plans</a><a class="ulink" href="#reviews" data-cursor>Reviews</a><a class="ulink" href="#contact" data-cursor>Contact</a></nav>
+    <button class="totop" type="button" id="totop" data-cursor>Back to top <span>&uarr;</span></button>
+  </div>
+  <div class="o-bar">
+    <span>&copy; 2026 Mentorly. All rights reserved.</span>
+    <span class="credit">Designed &amp; developed by <a href="mailto:ayanjit7987@gmail.com" data-cursor>Ayanjit Dutta Banik</a></span>
+  </div>
+</footer>
+
+
+<div class="peek" id="peek" aria-hidden="true"><i></i><i></i></div>
+
+<script src="script.js" defer></script>
+</body>
+</html>
